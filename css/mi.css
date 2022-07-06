@@ -1,0 +1,162 @@
+.header {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    line-height: 40px ;
+    font-size: 12px;
+}
+.wrap{
+    width: 1226px;
+    margin: 0 auto;
+}
+.topbar-nav{
+    float: left;
+}
+.topbar-nav li{
+    float: left;
+    position: relative;
+}
+.topbar-nav li:hover>.download{
+    height: 148px;
+}
+.topbar-nav li:hover>.triangle{
+   display: block;
+}
+li a{
+    color: #b0b0b0;
+}
+li a:hover{
+    color: #fff;
+}
+.sep{
+    margin: 0 6px;
+
+    float: left;
+    color: #424242;
+}
+
+.header-rigth{
+    float: right;
+}
+.header-rigth li{
+    float: left;
+}
+
+/* .header-rigth li:nth-last-child(2){
+    margin-right: 20px;
+} */
+/* .header-rigth li:nth-last-child(1){
+    width: 120px;
+    height: 40px;
+    margin-left: 25px;
+    background-color: #424242;
+} */
+/* .header-rigth li a:nth-last-child(1) {
+    display: block;
+  } */
+/* .header-rigth li:nth-last-child(1) :hover{
+    background-color: #fff;
+} */
+.cart{
+    width: 120px;
+    height: 40px;
+    margin-left: 25px;
+    background-color: #424242;
+    cursor: pointer;
+    position: relative;
+}
+.cart span{
+    margin-right: 5px;
+}
+/* 使用伪类元素不能有空格 */
+.cart:hover{
+    background-color: #fff;
+}
+.cart:hover a{
+    color: #ff6770;
+}
+
+.wrap::before{
+    content:" ";
+    display: table;
+}
+.wrap::after{
+    content:" ";
+    display: table;
+}
+.wrap:after{
+    clear: both;
+}
+
+/* 触发 hasLayout zoom：1*/
+/* 伪元素清除浮动，需要在浮动的外曾容器添加  .clearfix */
+/* .clearfix:after{
+    content: "020"; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;  
+    }
+  
+  .clearfix {
+     
+    zoom: 1; 
+    } */
+/* 购物车，下载app显示思路
+1）绝对定位到正常位置
+2）隐藏
+3）鼠标悬停
+ */
+
+ .cart-list{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width:316px;
+    height: 0;
+    overflow: hidden;
+    line-height: 100px;
+    background-color: #fff;
+    box-shadow:0 2px 10px rgba(0, 0, 0, .15);
+    transition: all .3s;
+ }
+ .cart:hover > .cart-list{
+    
+    height: 100px;
+ }
+ .download{
+    width: 124px;
+    overflow: hidden;
+    height: 0;
+    background-color: #fff;
+    box-shadow:0 1px 5px #aaa;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -62px;
+    transition: all .3s;
+ }
+ .download img{
+    width: 90px;
+    height: 90px;
+    margin: 18px auto 12px ;
+    display: block;
+ }
+ .download p{
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+ }
+ 
+ .triangle{
+    width:0;
+    height: 0;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -8px;
+    display: none;
+ }

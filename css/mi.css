@@ -66,7 +66,7 @@ li a:hover{
     position: relative;
 }
 .cart span{
-    margin-right: 15px;
+    margin-right: 5px;
 }
 /* 使用伪类元素不能有空格 */
 .cart:hover{
